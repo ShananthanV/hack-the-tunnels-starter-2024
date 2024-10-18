@@ -186,7 +186,13 @@ npm install
 npx prisma migrate dev
 ```
 
-4. Run the service
+4. Add the Seed Data
+
+```
+npx prisma db seed
+```
+
+5. Run the service
 
 ```
 npm run dev
@@ -252,7 +258,7 @@ It acts as a way of all saved timetables associated with the account.
 
 This screen may appear empty to you if you have not created a timetable on `/timetables/build`.
 
-If you have created a timetable, you will likely see a strinified date string as it's title, this is because the code the sends the create timetable request does not hard code a name so that it's easier to differentiate timetables:
+If you have created a timetable, you will likely see a stringified date string as its title, this is because the code the sends the create timetable request does not hard code a name so that it's easier to differentiate timetables:
 
 ```typescript
 const createTimetable = async () => {
